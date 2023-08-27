@@ -54,7 +54,7 @@ if not os.path.exists('output'):
     os.mkdir('output')
 
 user_id = urllib.parse.quote(sys.argv[2])
-with open(f'output/{site}_articles.csv', mode='w', newline='\n') as f:
+with open(f'output/{site}_articles.csv', mode='w', newline='\n', encoding='utf-8') as f:
     f.write("published, title,\n")
     if site == 'qiita':
         write_qiita_articles(user_id, f.write)
