@@ -31,7 +31,7 @@ def write_qiita_articles(user_id, write):
 
 
 def write_zenn_articles(user_id, write):
-    response = requests.get(f"https://zenn.dev/{user_id}/feed")
+    response = requests.get(f"https://zenn.dev/{user_id}/feed?all=1")
     response.encoding = response.apparent_encoding
     feed = feedparser.parse(response.text)
     for entry in feed.entries:
