@@ -28,3 +28,10 @@ $ . .venv/bin/activate
 ```
 
 You can only make up to 60 requests per hour per IP address because you are not authenticated with [Qiita API v2](https://qiita.com/api/v2/docs).
+
+Output
+
+```csv
+published, title,
+YYYY/mm/dd, article title,
+```
